@@ -14,8 +14,11 @@
 
 class Cat < ApplicationRecord
   validates :birth_date, presence: true
-  validates :color, presence: true, inclusion: { in: %w(black white tuxedo calico tabby), message: "%{color} is not a valid color" }
+  validates :color, presence: true, inclusion: { in: %w(black white tuxedo calico tabby)}
   validates :name, presence: true
-  validates :sex, presence: true, inclusion: { in: %w(M F), message: "%{sex} must be M or F" }
+  validates :sex, presence: true, inclusion: { in: %w(M F)}
   validates :description, presence: true
+  has_many :cat_rental_requests
+  # start_date: 10/31/2017
+  # end_date: 1/05/2017
 end

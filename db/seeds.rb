@@ -17,3 +17,11 @@ cats = Cat.create([
     sex: 'F',
     description: 'An old, grumpy cat.'},
    ])
+
+requests = CatRentalRequest.create([
+  {
+    cat_id: 1,
+    start_date: Date.parse('2017-10-24'),
+    end_date: Date.parse('2017-10-31')
+  }
+  ])
